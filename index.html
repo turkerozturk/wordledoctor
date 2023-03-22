@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wordle Doctor</title>
+  
+  <META NAME="robots" CONTENT="noindex,nofollow">
+
+  <link href="frontend/3party/libs/toastr/toastr.min.css" rel="stylesheet" />
+  <link href="frontend/this/index/css/index.css" rel="stylesheet" type="text/css" />
+
+  <!-- favicons source https://icons8.com/icons/set/letter-w-green -->
+  <link type="image/png" sizes="16x16" rel="icon" href="frontend/3party/media/icons/favicon/favicon-16.png">
+  <link type="image/png" sizes="32x32" rel="icon" href="frontend/3party/media/icons/favicon/favicon-32.png">
+  <link type="image/png" sizes="96x96" rel="icon" href="frontend/3party/media/icons/favicon/favicon-96.png">
+
+</head>
+
+<body>
+  <div id="ui">
+
+    <h1>WORDLE DOCTOR</h1>
+    <form id="myForm">
+      <fieldset>
+        <!-- <legend>Kelime Dili</legend> -->
+        <label><input type="radio" name="radioName" value="TR" />Turkish</label>
+        <label><input type="radio" name="radioName" value="EN" />English</label>
+        <label><input type="radio" name="radioName" value="DE" />German</label>
+        <label><input type="radio" name="radioName" value="ES" />Spanish</label>
+        <label><input type="radio" name="radioName" value="IT" />Italian</label>
+      </fieldset>
+    </form>
+    <!-- Message Panel -->
+
+    <p id="message">Select language. The board is cleared when you select it.</p>
+    <!-- TODO https://stackoverflow.com/questions/596351/how-can-i-know-which-radio-button-is-selected-via-jquery -->
+    <div id="language">English</div>
+
+    <!-- Tile Board -->
+    <div id="tile-board">
+      <div class="row">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+      </div>
+      <div class="row">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+      </div>
+      <div class="row">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+      </div>
+      <div class="row">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+      </div>
+      <div class="row">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+      </div>
+      <div class="row">
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <div class="tile"></div>
+      </div>
+    </div>
+
+    <marquee direction="LEFT" width="350px">
+      <div class="resultPlaceHolder" id="resultPlaceHolder">
+        <div class="result">The submit button brings up the appropriate 10 words.</div>
+      </div>
+    </marquee>
+
+
+    <!-- Visual Keyboard -->
+    <div id="visualkeyboard"></div>
+
+    <!-- Debug Section--->
+    <div class="debug">
+      <table>
+        <tr>
+          <td>Current Row</td>
+          <td id="cRow"></td>
+        </tr>
+        <tr>
+          <td>Current Col</td>
+          <td id="cCol"></td>
+        </tr>
+        <tr>
+          <td>Prev Row</td>
+          <td id="pRow"></td>
+        </tr>
+        <tr>
+          <td>Prev Col</td>
+          <td id="pCol"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="frontend/3party/libs/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="frontend/3party/libs/toastr/toastr.min.js"></script>
+  <script defer src="frontend/this/index/js/index.js" type="module" charset="utf-8"></script>
+</body>
+
+</html>
